@@ -22,6 +22,10 @@ vad_moving_average_width = 8
 vad_max_silence_length = 1
 
 
+## Audio start/end cropping
+crop_length = 200 # In milliseconds
+
+
 ## Audio volume normalization
 audio_norm_target_dBFS = -30
 
