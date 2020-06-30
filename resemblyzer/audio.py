@@ -36,6 +36,7 @@ def preprocess_wav(fpath_or_wav: Union[str, Path, np.ndarray], source_sr: Option
     wav = crop_audio(wav, source_sr)
     wav = normalize_volume(wav, audio_norm_target_dBFS, increase_only=True)
     wav = trim_long_silences(wav)
+    wav = wav[:min(len(wav), 30000)]
 
     return wav
 
